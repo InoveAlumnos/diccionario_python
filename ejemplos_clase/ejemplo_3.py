@@ -4,28 +4,21 @@
 # Autor: Inove Coding School
 # Version: 2.2
 
-import csv
 
-
-def diccionario():
+def bucles_y_diccionario():
+    print("Ejemplo: bucles_y_diccionario")
     # Crear un diccionario de inquilinos del primero piso
     piso_1 = {'a': 'Gutierrez', 'b': 'Naon', 'c': 'Palermo'}
-  
+
+    # Crear un diccionario de inquilinos del segundo piso
     piso_2 = {}  # Diccionario vacio del segundo piso
-    piso_2['a'] = 'Tucuman'  # 1a
-    piso_2['b'] = 'Mendoza'  # 1b
-    piso_2['c'] = 'Cordoba'  # 1c
+    piso_2['a'] = 'Tucuman'  # 2a
+    piso_2['b'] = 'Mendoza'  # 2b
+    piso_2['c'] = 'Cordoba'  # 2c
 
     # Imprimir los diccionarios
     print(piso_1)
     print(piso_2)
-
-    # Ahora digamos que se mundo "Mendoza"
-    # y viene la familia Neuquen en su lugar:
-    piso_2['b'] = 'Neuquen'  # 2b
-
-    # ¿Quíen vive en el 1b?
-    print(piso_1['b'])  # Naon
 
     # En que departamento del segundo piso vive Cordoba
     # Realizar un bucle de diccionarios
@@ -35,11 +28,28 @@ def diccionario():
         if v == "Cordoba":
             print(v, "se encuentra en el departamento", k)
 
+    print("terminamos")
+
+
+def listas_y_diccionario():
+    print("Ejemplo: listas_y_diccionario")
+    # Crear un diccionario de inquilinos del primero piso
+    piso_1 = {'a': 'Gutierrez', 'b': 'Naon', 'c': 'Palermo'}
+
+    # Crear un diccionario de inquilinos del segundo piso
+    piso_2 = {}  # Diccionario vacio del segundo piso
+    piso_2['a'] = 'Tucuman'  # 2a
+    piso_2['b'] = 'Mendoza'  # 2b
+    piso_2['c'] = 'Cordoba'  # 2c
+
     # Armemos ahora el edificio de 2 pisos, 
     # el cual es una lista de diccionarios
     edificio = []
     edificio.append(piso_1)
     edificio.append(piso_2)
+
+    # Imprimir la lista de diccionarios
+    print(edificio)
 
     # Imprimir las familias que viven
     # en cada departamento "a"
@@ -54,35 +64,10 @@ def diccionario():
             if v == "Tucuman":
                 print(v, "se encuentra en el piso", i, "departamento", k)
 
-    # Acceso seguro a los datos
-    # ¿Quíen vive en el 1e?
-    # ¿Cómo podemos acceder a un valor que no existe
-    # y que no explite el programa --> Utilizando "get":
-    print(piso_1.get('e'))
-
-
-def operador_in():
-    # El operador "in" (en) devuelve True si
-    # un elemento se encuentra dentro de otro
-
-    # En diccionarios nos indica si existe
-    # una clave (key) definido en su interior
-
-    # En este diccionario almacenaremos
-    # cuantos productos hay en stock
-    stock_productos = {"monitor": 6, "teclado": 3, "mouse": 54}
-
-    if "monitor" in stock_productos:
-        print("En mi stock hay monitores")
-
-    if "bicicleta" in stock_productos:
-        print("En mi stock hay bicicletas")
-
-    if "bicicleta" not in stock_productos:
-        print("En mi stock NO hay bicicletas")
+    print("terminamos")
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    diccionario()
-    operador_in()
+    bucles_y_diccionario()
+    listas_y_diccionario()
