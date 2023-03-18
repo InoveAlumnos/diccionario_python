@@ -1,4 +1,4 @@
-# Archivos [Python]
+# Diccionarios [Python]
 # Ejemplos de clase
 
 # Autor: Inove Coding School
